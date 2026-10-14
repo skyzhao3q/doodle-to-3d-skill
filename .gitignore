@@ -29,3 +29,8 @@ __pycache__/
 *.pyc
 .venv/
 .DS_Store
+
+# README sample images (published with the family's consent) are the only media in the repo
+!docs/images/
+!docs/images/*.jpg
+!docs/images/*.gif

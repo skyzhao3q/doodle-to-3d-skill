@@ -9,7 +9,7 @@ Pipeline: photo → Gemini clean-up → transparent cutout → **parts (config.j
 flight / fire scenes → sound effects → video → frozen asset library.
 Everything except three Gemini image calls runs locally (Python + OpenCV, Blender, ffmpeg).
 
-Read `README.md` (setup) and `docs/CONFIG.md` (config reference) once. Worked example:
+Read `README.md` (setup, Japanese; English: `README.en.md`) and `docs/CONFIG.md` (config reference) once. Worked example:
 `examples/purple-dragon/config.json`.
 
 ## Ground rules
