@@ -1,0 +1,31 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# work directories and generated media (drawings are personal: never commit them)
+work/
+works/
+input/
+ref/
+out/
+renders/
+assets/
+*.png
+*.jpg
+*.jpeg
+*.heic
+*.heif
+*.webp
+*.mp4
+*.mov
+*.wav
+*.blend
+*.blend1
+*.npz
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.DS_Store

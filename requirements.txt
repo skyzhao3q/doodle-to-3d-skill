@@ -1,0 +1,6 @@
+numpy>=1.26
+opencv-python>=4.9
+scipy>=1.11
+pillow>=10.0
+google-genai>=1.0
+# optional: pillow-heif  (iPhone HEIC photos)

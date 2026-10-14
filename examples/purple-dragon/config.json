@@ -1,0 +1,883 @@
+{
+ "_comment": "Worked example for a child's trading-card drawing of a purple dragon (the drawing itself is not in this repo). All coordinates are pixels of ref/cutout.png (1409 x 2171 for that drawing); yours will differ — read them off scripts/grid.py output.",
+ "subject": "a purple dragon with green bat wings, green ears, big green eyes and a long purple tail ending in a blue flame-like tuft",
+ "extract_notes": "Remove the card's handwritten name, HP, move text, the title boxes and the yellow stars.",
+ "pad": 260,
+ "fill": {
+  "color": "purple",
+  "search": [
+   250,
+   900,
+   810,
+   1610
+  ],
+  "patch": 110
+ },
+ "parts": {
+  "near": {
+   "type": "cut",
+   "label": "てまえの つばさ",
+   "pivot": [
+    650,
+    960
+   ],
+   "poly": [
+    [
+     590,
+     860
+    ],
+    [
+     800,
+     700
+    ],
+    [
+     900,
+     470
+    ],
+    [
+     960,
+     380
+    ],
+    [
+     1409,
+     340
+    ],
+    [
+     1409,
+     1020
+    ],
+    [
+     1000,
+     1020
+    ],
+    [
+     760,
+     1070
+    ],
+    [
+     640,
+     1060
+    ]
+   ],
+   "minus_poly": [
+    [
+     [
+      540,
+      800
+     ],
+     [
+      598,
+      860
+     ],
+     [
+      630,
+      930
+     ],
+     [
+      672,
+      990
+     ],
+     [
+      705,
+      1050
+     ],
+     [
+      718,
+      1110
+     ],
+     [
+      540,
+      1110
+     ]
+    ]
+   ],
+   "add": [
+    {
+     "all": [
+      {
+       "poly": [
+        [
+         590,
+         860
+        ],
+        [
+         800,
+         700
+        ],
+        [
+         900,
+         470
+        ],
+        [
+         960,
+         380
+        ],
+        [
+         1409,
+         340
+        ],
+        [
+         1409,
+         1020
+        ],
+        [
+         1000,
+         1020
+        ],
+        [
+         760,
+         1070
+        ],
+        [
+         640,
+         1060
+        ]
+       ]
+      },
+      {
+       "poly": [
+        [
+         540,
+         800
+        ],
+        [
+         598,
+         860
+        ],
+        [
+         630,
+         930
+        ],
+        [
+         672,
+         990
+        ],
+        [
+         705,
+         1050
+        ],
+        [
+         718,
+         1110
+        ],
+        [
+         540,
+         1110
+        ]
+       ]
+      },
+      "color:green"
+     ]
+    }
+   ],
+   "height": {
+    "plate": 16
+   }
+  },
+  "head": {
+   "type": "cut",
+   "label": "あたま",
+   "pivot": [
+    450,
+    880
+   ],
+   "poly": [
+    [
+     120,
+     430
+    ],
+    [
+     200,
+     380
+    ],
+    [
+     330,
+     330
+    ],
+    [
+     420,
+     300
+    ],
+    [
+     500,
+     250
+    ],
+    [
+     830,
+     205
+    ],
+    [
+     845,
+     800
+    ],
+    [
+     700,
+     825
+    ],
+    [
+     600,
+     860
+    ],
+    [
+     560,
+     885
+    ],
+    [
+     300,
+     895
+    ],
+    [
+     225,
+     865
+    ],
+    [
+     115,
+     780
+    ],
+    [
+     105,
+     600
+    ]
+   ],
+   "minus": [
+    "near"
+   ],
+   "height": {
+    "puff": 0.85
+   },
+   "repaint": [
+    {
+     "all": [
+      "self",
+      {
+       "poly": [
+        [
+         0,
+         0
+        ],
+        [
+         440,
+         0
+        ],
+        [
+         440,
+         480
+        ],
+        [
+         0,
+         480
+        ]
+       ]
+      },
+      "color:green"
+     ],
+     "dilate": 15
+    },
+    {
+     "all": [
+      "alpha",
+      "self",
+      {
+       "poly": [
+        [
+         0,
+         0
+        ],
+        [
+         440,
+         0
+        ],
+        [
+         440,
+         480
+        ],
+        [
+         0,
+         480
+        ]
+       ]
+      },
+      "not_color:purple"
+     ],
+     "dilate": 9,
+     "clip": [
+      {
+       "poly": [
+        [
+         300,
+         150
+        ],
+        [
+         440,
+         150
+        ],
+        [
+         440,
+         420
+        ],
+        [
+         300,
+         420
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "repaint_outline": [
+    [
+     [
+      240,
+      368
+     ],
+     [
+      330,
+      333
+     ],
+     [
+      420,
+      300
+     ],
+     [
+      470,
+      276
+     ]
+    ]
+   ],
+   "_note": "the child's partial far wing overlapped the head top; it is painted over and the far wing is rebuilt below"
+  },
+  "larm": {
+   "type": "cut",
+   "label": "ひだりうで",
+   "pivot": [
+    345,
+    1040
+   ],
+   "poly": [
+    [
+     355,
+     950
+    ],
+    [
+     356,
+     1100
+    ],
+    [
+     350,
+     1290
+    ],
+    [
+     310,
+     1420
+    ],
+    [
+     250,
+     1510
+    ],
+    [
+     110,
+     1500
+    ],
+    [
+     80,
+     1300
+    ],
+    [
+     88,
+     1100
+    ],
+    [
+     160,
+     990
+    ],
+    [
+     240,
+     945
+    ]
+   ],
+   "close": 15,
+   "height": {
+    "puff": 0.7
+   }
+  },
+  "lleg": {
+   "type": "cut",
+   "label": "ひだりあし",
+   "pivot": [
+    450,
+    1380
+   ],
+   "poly": [
+    [
+     335,
+     1300
+    ],
+    [
+     440,
+     1335
+    ],
+    [
+     560,
+     1450
+    ],
+    [
+     665,
+     1500
+    ],
+    [
+     675,
+     1600
+    ],
+    [
+     615,
+     1720
+    ],
+    [
+     590,
+     1800
+    ],
+    [
+     395,
+     1800
+    ],
+    [
+     375,
+     1650
+    ],
+    [
+     330,
+     1520
+    ]
+   ],
+   "minus": [
+    "larm"
+   ],
+   "close": 15,
+   "height": {
+    "puff": 0.75
+   }
+  },
+  "rleg": {
+   "type": "cut",
+   "label": "みぎあし",
+   "pivot": [
+    770,
+    1250
+   ],
+   "poly": [
+    [
+     680,
+     1240
+    ],
+    [
+     760,
+     1182
+    ],
+    [
+     935,
+     1182
+    ],
+    [
+     935,
+     1300
+    ],
+    [
+     882,
+     1420
+    ],
+    [
+     868,
+     1640
+    ],
+    [
+     688,
+     1645
+    ],
+    [
+     660,
+     1470
+    ]
+   ],
+   "minus": [
+    "lleg"
+   ],
+   "close": 15,
+   "height": {
+    "puff": 0.75
+   }
+  },
+  "tail": {
+   "type": "cut",
+   "label": "しっぽ",
+   "pivot": [
+    985,
+    1310
+   ],
+   "poly": [
+    [
+     935,
+     1270
+    ],
+    [
+     1075,
+     1270
+    ],
+    [
+     1095,
+     1500
+    ],
+    [
+     1180,
+     1700
+    ],
+    [
+     1200,
+     2171
+    ],
+    [
+     540,
+     2171
+    ],
+    [
+     540,
+     1770
+    ],
+    [
+     830,
+     1750
+    ],
+    [
+     868,
+     1640
+    ],
+    [
+     882,
+     1420
+    ],
+    [
+     935,
+     1300
+    ]
+   ],
+   "minus": [
+    "rleg",
+    "lleg"
+   ],
+   "close": 9,
+   "height": {
+    "puff": 0.8,
+    "union": [
+     "torso"
+    ],
+    "scale": 0.97
+   }
+  },
+  "torso": {
+   "type": "fill",
+   "label": "からだ",
+   "poly": [
+    [
+     300,
+     760
+    ],
+    [
+     600,
+     760
+    ],
+    [
+     598,
+     870
+    ],
+    [
+     630,
+     930
+    ],
+    [
+     672,
+     990
+    ],
+    [
+     705,
+     1050
+    ],
+    [
+     718,
+     1110
+    ],
+    [
+     722,
+     1200
+    ],
+    [
+     750,
+     1260
+    ],
+    [
+     725,
+     1400
+    ],
+    [
+     650,
+     1470
+    ],
+    [
+     540,
+     1430
+    ],
+    [
+     430,
+     1340
+    ],
+    [
+     345,
+     1295
+    ],
+    [
+     348,
+     1100
+    ],
+    [
+     318,
+     1000
+    ],
+    [
+     300,
+     900
+    ]
+   ],
+   "refill": [
+    "part:larm",
+    "part:lleg",
+    "part:rleg",
+    "part:near",
+    "outside",
+    "color:green",
+    {
+     "all": [
+      {
+       "poly": [
+        [
+         600,
+         860
+        ],
+        [
+         598,
+         870
+        ],
+        [
+         630,
+         930
+        ],
+        [
+         672,
+         990
+        ],
+        [
+         705,
+         1050
+        ],
+        [
+         718,
+         1110
+        ],
+        [
+         602,
+         1110
+        ]
+       ]
+      },
+      "not_color:purple"
+     ]
+    }
+   ],
+   "outline": [
+    [
+     [
+      598,
+      870
+     ],
+     [
+      630,
+      930
+     ],
+     [
+      672,
+      990
+     ],
+     [
+      705,
+      1050
+     ],
+     [
+      718,
+      1110
+     ],
+     [
+      722,
+      1200
+     ],
+     [
+      750,
+      1260
+     ],
+     [
+      725,
+      1400
+     ],
+     [
+      650,
+      1470
+     ],
+     [
+      540,
+      1430
+     ],
+     [
+      430,
+      1340
+     ],
+     [
+      345,
+      1295
+     ],
+     [
+      348,
+      1100
+     ],
+     [
+      318,
+      1000
+     ],
+     [
+      300,
+      900
+     ],
+     [
+      300,
+      760
+     ]
+    ]
+   ],
+   "height": {
+    "puff": 0.8,
+    "union": [
+     "tail"
+    ]
+   }
+  },
+  "far": {
+   "type": "mirror",
+   "label": "おくの つばさ",
+   "source": "near",
+   "src_pivot": [
+    650,
+    960
+   ],
+   "pivot": [
+    350,
+    720
+   ],
+   "tip": [
+    -300,
+    170
+   ],
+   "height": {
+    "plate": 14
+   },
+   "_note": "the child drew only a corner of the far wing; rebuilt from the near wing (mirrored, ~0.9x)"
+  },
+  "rarm": {
+   "type": "mirror",
+   "label": "みぎうで",
+   "source": "larm",
+   "src_pivot": [
+    345,
+    1040
+   ],
+   "pivot": [
+    705,
+    1075
+   ],
+   "rotate": -30,
+   "scale": 0.92,
+   "height": {
+    "puff": 0.7
+   },
+   "_note": "not drawn (hidden by the wing); left arm mirrored"
+  }
+ },
+ "rig": {
+  "root": "torso",
+  "x_offset": 0.22,
+  "plates": [
+   "near",
+   "far"
+  ],
+  "draw": [
+   {
+    "part": "far",
+    "depth": 0.9,
+    "depth_ref": "head"
+   },
+   {
+    "part": "torso"
+   },
+   {
+    "part": "tail"
+   },
+   {
+    "part": "rarm",
+    "depth": -0.4
+   },
+   {
+    "part": "rleg",
+    "depth": -0.45
+   },
+   {
+    "part": "lleg",
+    "depth": -0.45
+   },
+   {
+    "part": "larm",
+    "depth": -0.5
+   },
+   {
+    "part": "head",
+    "depth": "front"
+   },
+   {
+    "part": "near",
+    "depth": -0.75
+   }
+  ],
+  "motion": {
+   "near": "wing",
+   "far": "wing_mirror",
+   "head": "head",
+   "tail": "tail",
+   "lleg": "leg",
+   "rleg": "leg_opposite",
+   "rarm": "arm_wave",
+   "larm": "arm_swing"
+  },
+  "pose": {}
+ },
+ "fire": {
+  "color": "blue",
+  "mouth": {
+   "part": "head",
+   "at": [
+    265,
+    785
+   ]
+  },
+  "times": [
+   2.0,
+   3.0,
+   7.0
+  ],
+  "length": 1.4,
+  "tilt": -14,
+  "yaw": 30
+ }
+}
